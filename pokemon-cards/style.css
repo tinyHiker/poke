@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+}
+
+#pokemon-pack {
+    display: inline;
+
+}
+
+#pokemon-pack-img {
+    height: 300px;
+    width: 200px;
+}
+.pokemon-card img{
+    width: 300px;
+    height: 412px;
+    margin-top: 10px;
+}
+
+#instructions {
+    color: red;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+#pokemon-cards-opened {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
