@@ -1,7 +1,7 @@
 /* Overall Page Styling */
 body {
     font-family: 'Noto Sans JP', sans-serif; /* Japanese-inspired font */
-    background-color: #1f1f1f;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,16 +21,16 @@ body {
     border-radius: 5px;
     border: 1px solid #444;
     outline: none;
-    background-color: #333;
-    color: #eee;
+    background-color: white;
+    color: black;
     width: 250px;
 }
 
 button {
     padding: 12px;
     font-size: 1.1em;
-    background-color: #444;
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
     margin-left: 5px;
     border-radius: 5px;
@@ -50,12 +50,12 @@ button:hover {
 .pokemon-card {
     width: 450px;  /* Increased width */
     height: auto;  /* Auto height to fit more information */
-    background-color: #464646; /* Grey background */
+    background-color: white; /* Grey background */
     border: 3px solid #000; /* Black outlines */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    color: #eee;
+    color: black;
     font-size: 16px; /* Larger font size */
     text-align: center;
     display: flex;
@@ -71,7 +71,7 @@ button:hover {
 .header h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #ffcb05; /* Yellow accent for a retro feel */
+    color: black; /* Yellow accent for a retro feel */
 }
 
 .header p {
@@ -80,7 +80,7 @@ button:hover {
 }
 
 .image-section {
-    background-color: #1f1f1f;
+    background-color: whitesmoke;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -91,7 +91,7 @@ button:hover {
 }
 
 .info-section {
-    background-color: #2a2a2a;
+    background-color: white;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -106,12 +106,12 @@ button:hover {
     border-radius: 10px;
     font-weight: bold;
     text-transform: capitalize;
-    color: #333;
+    color: black;
     display: inline-block;
 }
 
 .details-section {
-    background-color: #2a2a2a;
+    background-color: white;
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -123,7 +123,7 @@ button:hover {
 }
 
 .breeding-section, .stats-section, .game-sprites-section {
-    background-color: #2a2a2a;
+    background-color: white;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -144,7 +144,7 @@ button:hover {
 }
 
 .stat-value {
-    color: whitesmoke;
+    color: black;
 }
 
 .gender-ratio {

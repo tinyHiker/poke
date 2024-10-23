@@ -35,6 +35,7 @@ function createPokemonCard(data) {
     const primaryType = data.types[0].type.name; // The primary type is the first one in the array
 
     
+    
 
 
     const genderRatioFemale = 100 - data.gender_rate * 12.5;
@@ -66,11 +67,9 @@ function createPokemonCard(data) {
         </div>
         <div class="stats-section">
             <p><strong>Base Stats:</strong></p>
-            ${stats}
         </div>
         <div class="game-sprites-section">
             <p><strong>Game Sprites:</strong></p>
-            ${sprites}
         </div>
     `;
 
