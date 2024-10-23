@@ -1,0 +1,193 @@
+/* Overall Page Styling */
+body {
+    font-family: 'Noto Sans JP', sans-serif; /* Japanese-inspired font */
+    background-color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#pokemonName {
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #444;
+    outline: none;
+    background-color: #333;
+    color: #eee;
+    width: 250px;
+}
+
+button {
+    padding: 12px;
+    font-size: 1.1em;
+    background-color: #444;
+    color: white;
+    border: none;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#pokemon-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pokemon-card {
+    width: 450px;  /* Increased width */
+    height: auto;  /* Auto height to fit more information */
+    background-color: #464646; /* Grey background */
+    border: 3px solid #000; /* Black outlines */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: #eee;
+    font-size: 16px; /* Larger font size */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    padding: 10px;
+    border-bottom: 3px solid #222;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffcb05; /* Yellow accent for a retro feel */
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.image-section {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.image-section img {
+    width: 200px;  /* Larger Pokémon sprite */
+}
+
+.info-section {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.info-section p {
+    margin: 5px 0;
+}
+
+.type {
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #333;
+    display: inline-block;
+}
+
+.details-section {
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.details-section p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.breeding-section, .stats-section, .game-sprites-section {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.breeding-section p, .stats-section p, .game-sprites-section p {
+    margin: 5px 0;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.stat-name {
+    font-weight: bold;
+}
+
+.stat-value {
+    color: whitesmoke;
+}
+
+.gender-ratio {
+    display: flex;
+    height: 10px;
+    margin: 5px 0;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gender-bar {
+    height: 100%;
+}
+
+.female {
+    background-color: #f48fb1;
+}
+
+.male {
+    background-color: #64b5f6;
+}
+
+/* Styling for different game sprites */
+.game-sprites-section img {
+    width: 50px;
+    margin: 5px;
+}
+
+/* Type-based color badge for the type */
+.grass { background-color: #78C850; }
+.fire { background-color: #F08030; }
+.water { background-color: #6890F0; }
+.electric { background-color: #F8D030; }
+.rock { background-color: #B8A038; }
+.ice { background-color: #98D8D8; }
+.fighting { background-color: #C03028; }
+.poison { background-color: #A040A0; }
+.ground { background-color: #E0C068; }
+.psychic { background-color: #F85888; }
+.bug { background-color: #A8B820; }
+.ghost { background-color: #705898; }
+.steel { background-color: #B8B8D0; }
+.dragon { background-color: #7038F8; }
+.dark { background-color: #705848; }
+.fairy { background-color: #EE99AC; }

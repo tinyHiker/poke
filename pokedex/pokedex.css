@@ -39,6 +39,10 @@ body {
     overflow-y: auto;
 }
 
+#pokemon-list::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
 .pokemon-name {
     border: 1px solid black;
     border-radius: 10px;
