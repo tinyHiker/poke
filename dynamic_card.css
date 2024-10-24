@@ -14,12 +14,12 @@ body {
     background-size: cover; /* Cover the entire viewport without repeating */
     background-attachment: fixed; /* Optional: makes the background fixed during scrolling */
 }
-}
+
 
 .search-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #pokemonName {
@@ -53,7 +53,7 @@ button:hover {
 #pokemon-card-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    position: relative;
 }
 
 .pokemon-card {
@@ -63,7 +63,8 @@ button:hover {
     border: 3px solid #000000; /* Black outlines */
     /* border-radius: 10px; */
     padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
+    box-shadow: 0 8px 16px 5px rgba(0, 0, 0, 0.5); /* Increased shadow intensity */
     color: #eee;
     font-size: 15px; 
     text-align: center;
@@ -452,5 +453,16 @@ button:hover {
 
 
 
+.image-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
 
-
+.corner-image {
+    width: 200px;
+    height: 200px;
+    display: block; /* Removes any extra space below the image */
+    transform: translate(50%, -40%);
+}

@@ -14,10 +14,23 @@ async function fetchPokemon() {
         
         
         createPokemonCard(pokeData, speciesData);
+        createPokeLinker(pokeData, speciesData);
     } catch (error) {
         alert('Pokémon not found! Please check the name.');
         console.error(error);
     }
+}
+
+
+function createPokeLinker(data, species) {
+    const cardContainer = document.getElementById('pokemon-card-container');
+
+    
+    let pokeLinker = document.createElement('a');
+    pokeLinker.href = `https://bulbapedia.bulbagarden.net/wiki/${capitalize(data.name)}`
+    pokeLinker.innerHTML = `<img src="pokeball5.png" alt="Descriptive Text" class="corner-image">`
+    pokeLinker.classList.add('image-link')
+    cardContainer.appendChild(pokeLinker)
 }
 
 function createPokemonCard(data, species) {
@@ -148,8 +161,5 @@ function getStatColor(stats, statVal){
     } else if (statVal == minValue){
         return "#ff000d"
     }
-
-
-
 
 }
