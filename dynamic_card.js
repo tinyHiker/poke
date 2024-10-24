@@ -13,44 +13,72 @@ async function fetchPokemon() {
         console.log(speciesData)
         
         
-        createPokemonCard(pokeData);
+        createPokemonCard(pokeData, speciesData);
     } catch (error) {
         alert('Pokémon not found! Please check the name.');
         console.error(error);
     }
 }
 
-function createPokemonCard(data) {
+function createPokemonCard(data, species) {
     const cardContainer = document.getElementById('pokemon-card-container');
     cardContainer.innerHTML = ''; // Clear any existing card
 
     const pokemonCard = document.createElement('div');
     pokemonCard.classList.add('pokemon-card');
 
+    //Abilities
     const abilities = data.abilities.map(ability =>
         `${capitalize(ability.ability.name)}${ability.is_hidden ? ' (Hidden Ability)' : ''}`
     ).join(', ');
 
-    const types = data.types.map(type => capitalize(type.type.name)).join(', ');
-    const primaryType = data.types[0].type.name; // The primary type is the first one in the array
-
     
-    
+    //Type Elements
+    types = data.types.map(type => capitalize(type.type.name))
+    let typeElements = ''
+    for (let type of types){
+        typeElements += `<span class="type ${type.toLowerCase()}" id="typebox" >${type}</span>`
+    }
+
+    let primaryType = types[0].toLowerCase()
+    let primaryTypeID = `${primaryType}-image-container`
+
+    pokemonCard.classList.add(`${primaryType}-pokemon`)
 
 
-    const genderRatioFemale = 100 - data.gender_rate * 12.5;
+
+
+    //Stat Elements
+    const stats = data.stats.map(stat => `
+        <div class="stat">
+            <span class="stat-name" >${capitalize(stat.stat.name)}</span>
+            <span class="stat-value" style="color: ${ getStatColor(data.stats, stat.base_stat)};">${stat.base_stat}</span>
+        </div>
+    `).join('');
+
+
+
+    // Game Sprite Elements
+    sprites = getSprites(data)
+
+
+    //Gender Ratio Values
+    const genderRatioFemale = 100 - species.gender_rate * 12.5;
     const genderRatioMale = 100 - genderRatioFemale;
 
+
+    //Main Image URL
+    let main_image = data?.sprites?.versions?.['generation-v']?.['black-white']?.front_default;
     const pokemonHTML = `
         <div class="header">
             <h1>${capitalize(data.name)}</h1>
             <p>#${data.id.toString().padStart(4, '0')}</p>
         </div>
-        <div class="image-section">
-            <img src="${data.sprites.other['official-artwork'].front_default}" alt="${data.name}">
+        <div class="image-section" id="${primaryTypeID}" style=>
+            <img src="${main_image}" alt="${data.name}">
         </div>
         <div class="info-section">
-            <p><strong>Type:</strong> <span class="type ${primaryType}">${types}</span></p>
+            <p><strong>Type:</strong> ${typeElements}</p>
             <p><strong>Abilities:</strong> ${abilities}</p>
         </div>
         <div class="details-section">
@@ -67,9 +95,11 @@ function createPokemonCard(data) {
         </div>
         <div class="stats-section">
             <p><strong>Base Stats:</strong></p>
+            ${stats}
         </div>
         <div class="game-sprites-section">
             <p><strong>Game Sprites:</strong></p>
+            ${sprites}
         </div>
     `;
 
@@ -82,3 +112,44 @@ function capitalize(str) {
 }
 
 
+function getSprites(data){
+    choices = [['generation-v', 'black-white'], ['generation-viii','icons'], ['generation-vi' , 'x-y']]
+
+    let sprites = ""
+
+    for (let choice of choices){
+        let sprite = data?.sprites?.versions?.[choice[0]]?.[choice[1]]?.front_default;
+        if (sprite){
+            sprites += `<img src=${sprite}></img>`
+
+        }
+    }
+
+    return sprites
+
+}
+
+function getMaxMinStats(data){
+    let stats = data.map(stat => stat.base_stat)
+    let max = Math.max(...stats);
+    let min = Math.min(...stats);
+    return [max, min]
+    
+}
+
+
+
+function getStatColor(stats, statVal){
+
+    let [maxValue, minValue] = getMaxMinStats(stats)
+    
+    if (statVal == maxValue){
+        return "#66ff00"
+    } else if (statVal == minValue){
+        return "#ff000d"
+    }
+
+
+
+
+}
