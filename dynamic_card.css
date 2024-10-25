@@ -8,11 +8,9 @@ body {
     align-items: center;
     margin: 0;
     padding: 20px;
-    background-image: url('Sinnoh.png');
-    background-repeat: no-repeat;
-    background-position: center center; /* Center the image within the page */
-    background-size: cover; /* Cover the entire viewport without repeating */
-    background-attachment: fixed; /* Optional: makes the background fixed during scrolling */
+    background-image: url('BW_FIRE.webp');
+    
+    
 }
 
 
@@ -461,8 +459,8 @@ button:hover {
 }
 
 .corner-image {
-    width: 200px;
-    height: 200px;
+    width: 70px;
+    height: 70px;
     display: block; /* Removes any extra space below the image */
-    transform: translate(50%, -40%);
+    transform: translate(40%, -34%);
 }

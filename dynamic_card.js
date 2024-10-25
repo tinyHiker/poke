@@ -10,9 +10,10 @@ async function fetchPokemon() {
         const speciesResponse = await fetch(speciesUrl);
         const speciesData = await speciesResponse.json();
 
-        console.log(speciesData)
+        let statTotal = getStatsTotal(pokeData.stats)
+        let pokemonType = pokeData.types[0].type.name.toLowerCase()
         
-        
+        setWallpaper(pokemonType, statTotal)
         createPokemonCard(pokeData, speciesData);
         createPokeLinker(pokeData, speciesData);
     } catch (error) {
@@ -25,10 +26,11 @@ async function fetchPokemon() {
 function createPokeLinker(data, species) {
     const cardContainer = document.getElementById('pokemon-card-container');
 
-    
+    let pokeball = getPokeballType(data, species)
+
     let pokeLinker = document.createElement('a');
     pokeLinker.href = `https://bulbapedia.bulbagarden.net/wiki/${capitalize(data.name)}`
-    pokeLinker.innerHTML = `<img src="pokeball5.png" alt="Descriptive Text" class="corner-image">`
+    pokeLinker.innerHTML = `<img src="pokeballs/${pokeball}" alt="Descriptive Text" class="corner-image">`
     pokeLinker.classList.add('image-link')
     cardContainer.appendChild(pokeLinker)
 }
@@ -161,5 +163,61 @@ function getStatColor(stats, statVal){
     } else if (statVal == minValue){
         return "#ff000d"
     }
+
+}
+
+function getStatsTotal(stats){
+    let statsTotal = 0
+    stats.forEach(stat => statsTotal += stat.base_stat)
+    return statsTotal
+
+}
+
+function getPokeballType(data, species){
+
+    let statsTotal = getStatsTotal(data.stats)
+    let pokeBall
+
+    primaryType = data.types[0].type.name.toLowerCase()
+
+
+    if (species.is_baby){
+        pokeBall= "DREAMBALL.png"
+        return pokeBall
+    }
+    if (species.is_legendary || species.is_mythical){
+        pokeBall = "MASTERBALL.png"
+        return pokeBall
+    }
+
+
+
+    if (statsTotal <= 350){
+        pokeBall = 'POKEBALL.png'
+        if (primaryType === 'bug') {
+            pokeBall= 'BUGBALL.png'
+        } else if (primaryType === 'water'){
+            pokeBall = 'WATERBALL.png'
+        }
+    } else if (statsTotal <= 500){
+        pokeBall = 'GREATBALL.png'
+        if (primaryType === 'bug') {
+            pokeBall= 'BUGBALL.png'
+        } else if (primaryType === 'water'){
+            pokeBall = 'WATERBALL.png'
+        }
+    } else if (statsTotal <= 580){
+        pokeBall = 'ULTRABALL.png'
+    } else {
+        pokeBall = "MEGABALL.png"
+
+    }
+    return pokeBall
+
+
+}
+
+function setWallpaper(type, base_stat){
+    return undefined
 
 }
