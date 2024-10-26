@@ -1,42 +1,77 @@
 .bug_background {
     background-image: url('pixel_wallpapers/BUG.jpg');
 }
-.ice_background {
-    background-image: url('pixel_wallpapers/ICE.jpg');
+.dark_background {
+    background-image: url('pixel_wallpapers/Dark.png');
+    background-size: 500px 500px
+}
+.dragon_background {
+    background-image: url('pixel_wallpapers/DRAGON5.png');
 
+}
+.electric_background {
+    background-image: url('pixel_wallpapers/ELECTRIC.png');
+    background-size: 700px 700px
+}
+.fighting_background {
+    background-image: url('pixel_wallpapers/FIGHTING3.png');
+    background-size: 800px 800px
 }
 .fire_background {
     background-image: url('pixel_wallpapers/FIRE.webp');
+    background-size: 700px 700px
 
+}
+.flying_background {
+    background-image: url('pixel_wallpapers/FLYING2.gif')
+}
+.ghost_background {
+    background-image: url('pixel_wallpapers/GHOST2.jpg');
+    background-size: 700px 700px
 }
 .grass_background {
     background-image: url('pixel_wallpapers/GRASS.jpg');
 
 }
-.dragon_background {
-    background-image: url('pixel_wallpapers/DRAGON1.jpg');
+.ground_background {
+    background-image: url('pixel_wallpapers/GROUND3.png');
+    background-size: 800px 800px
+}
+.ice_background {
+    background-image: url('pixel_wallpapers/ICE.jpg');
 
 }
-.water_background {
-    background-image: url('pixel_wallpapers/WATER.jpg');
-
+.normal_background {
+    background-image: url('pixel_wallpapers/NORMAL.jpg');
+    background-size: 500px 500px
 }
-.steel_background {
-    background-image: url('pixel_wallpapers/STEEL.jpg');
+
+.psychic_background {
+    background-image: url('pixel_wallpapers/PSYCHIC2.jpg');
 
 }
 .rock_background {
     background-image: url('pixel_wallpapers/ROCK.jpg');
+    background-size: 400px 400px
 
 }
-.psychic_background {
-    background-image: url('pixel_wallpapers/PSYCHIC.jpg');
+.steel_background {
+    background-image: url('pixel_wallpapers/STEEL2.png');
+    background-size: 850px 650px
 
 }
-.normal_background {
-    background-image: url('pixel_wallpapers/NORMAL.jpg')
+.water_background {
+    background-image: url('pixel_wallpapers/WATER1.jpg');
+    background-size: 550px 400px
+
 }
 
-.ghost_background {
-    background-image: url('pixel_wallpapers/GHOST.gif')
-}
+
+
+
+
+
+
+
+
+

@@ -229,7 +229,25 @@ function setWallpaper(type, baseStat, generation){
     
     let body = document.querySelector("body")
     console.log(body.classList)
-    body.classList.length > 10 ? body.classList.remove('bug_background', 'ice_background', 'grass_background', 'dragon_background', '') : undefined
+    const classNames = [
+        'bug_background',
+        'dark_background',
+        'dragon_background',
+        'electric_background',
+        'fighting_background',
+        'fire_background',
+        'flying_background',
+        'ghost_background',
+        'grass_background',
+        'ground_background',
+        'ice_background',
+        'normal_background',
+        'psychic_background',
+        'rock_background',
+        'steel_background',
+        'water_background'
+    ];
+    body.classList.length > 0 ? body.classList.remove(...classNames) : undefined
     
 
     body.classList.add(`${type.toLowerCase()}_background`)
