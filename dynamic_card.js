@@ -1,4 +1,11 @@
-async function fetchPokemon() {
+import { capitalize, getStatsTotal, getMaxMinStats} from "./helperFunctions.js"
+import getBackgroundClasses from './helperFunctions.js'
+
+window.fetchPokemon = async function() {
+
+    let background_classes = await getBackgroundClasses()
+    console.log(background_classes)
+
     const pokemonName = document.getElementById('pokemonName').value.toLowerCase();
     const pokeUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
     const speciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`;
@@ -23,7 +30,7 @@ async function fetchPokemon() {
         let pokeball = getPokeballType(primaryType, statTotal, speciesData.is_baby, speciesData.is_legendary, speciesData.is_mythical)
 
         
-        setWallpaper(pokemonType, statTotal, pokeGen)
+        setWallpaper(pokemonType, statTotal, pokeGen, pokeName.toLowerCase(), background_classes)
         createPokemonCard(pokeData, speciesData);
         createPokeLinker(pokeName, pokeball);
     } catch (error) {
@@ -31,6 +38,7 @@ async function fetchPokemon() {
         console.error(error);
     }
 }
+
 
 
 function createPokeLinker( pokemonName, pokeball) {
@@ -58,7 +66,7 @@ function createPokemonCard(data, species) {
 
     
     //Type Elements
-    types = data.types.map(type => capitalize(type.type.name))
+    let types = data.types.map(type => capitalize(type.type.name))
     let typeElements = ''
     for (let type of types){
         typeElements += `<span class="type ${type.toLowerCase()}" id="typebox" >${type}</span>`
@@ -83,7 +91,7 @@ function createPokemonCard(data, species) {
 
 
     // Game Sprite Elements
-    sprites = getSprites(data)
+    let sprites = getSprites(data)
 
 
     //Gender Ratio Values
@@ -132,13 +140,10 @@ function createPokemonCard(data, species) {
 }
 
 
-function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-}
 
 
 function getSprites(data){
-    choices = [['generation-v', 'black-white'], ['generation-viii','icons'], ['generation-vi' , 'x-y']]
+    let choices = [['generation-v', 'black-white'], ['generation-viii','icons'], ['generation-vi' , 'x-y']]
 
     let sprites = ""
 
@@ -156,15 +161,6 @@ function getSprites(data){
 
 
 
-function getMaxMinStats(data){
-    let stats = data.map(stat => stat.base_stat)
-    let max = Math.max(...stats);
-    let min = Math.min(...stats);
-    return [max, min]
-}
-
-
-
 function getStatColor(stats, statVal){
 
     let [maxValue, minValue] = getMaxMinStats(stats)
@@ -178,12 +174,6 @@ function getStatColor(stats, statVal){
 }
 
 
-function getStatsTotal(stats){
-    let statsTotal = 0
-    stats.forEach(stat => statsTotal += stat.base_stat)
-    return statsTotal
-
-}
 
 
 
@@ -225,35 +215,22 @@ function getPokeballType(primaryType, statsTotal, isBaby, isLegendary, isMythica
 
 }
 
-function setWallpaper(type, baseStat, generation){
+function setWallpaper(type, baseStat, generation, name, backgroundClasses){
     
     let body = document.querySelector("body")
     console.log(body.classList)
-    const classNames = [
-        'bug_background',
-        'dark_background',
-        'dragon_background',
-        'electric_background',
-        'fighting_background',
-        'fire_background',
-        'flying_background',
-        'ghost_background',
-        'grass_background',
-        'ground_background',
-        'ice_background',
-        'normal_background',
-        'psychic_background',
-        'rock_background',
-        'steel_background',
-        'water_background'
-    ];
-    body.classList.length > 0 ? body.classList.remove(...classNames) : undefined
+    
+
+    body.classList.length > 0 ? body.classList.remove(...backgroundClasses) : undefined
+
+    console.log(name)
+
+    if (backgroundClasses.includes(`${name}_background`))  {
+        body.classList.add(`${name}_background`)
+        return
+    }
     
 
     body.classList.add(`${type.toLowerCase()}_background`)
     
-    
-    
-    
-
 }

@@ -66,11 +66,159 @@
 
 }
 
+.poison_background {
+    background-image: url('pixel_wallpapers/POISON.png');
+    background-size: 800px 700px
+
+}
 
 
 
 
 
+/* LEGENDARIES */
+
+/* 'arceus_background',
+        'rayquaza_background',
+        'lugia_background',
+        'ho-oh_background',
+        'kyogre_background',
+        'groudon_wallpaper',
+        'giratina_wallpaper',
+        'mewtwo_wallpaper',
+        'zekrom_wallpaper',
+        'reshiram_wallpaper',
+
+        'bouffalant_wallpaper',
+        'bronzong_wallpaper',
+        'garchomp_wallpaper',
+        'hippowdon_wallpaper',
+        'infernape_wallpaper',
+        'metagross_wallpaper',
+        'milotic_wallpaper',
+*/
+
+
+.arceus_background {
+    background-image: url('pixel_wallpapers/customs/ARCEUS.jpg');
+    background-size: 800px 700px;
+        
+}
+
+
+.rayquaza_background {
+    background-image: url('pixel_wallpapers/customs/RAYQUAZA.jpg');
+    background-size: 800px 700px;
+        
+}
+
+.lugia_background {
+    background-image: url('pixel_wallpapers/customs/LUGIA.gif');
+    background-size: 700px 650px;
+        
+}
+
+.ho-oh_background {
+    background-image: url('pixel_wallpapers/customs/HO-OH.png');
+    background-size: 900px 600px
+
+}
+
+.kyogre_background, .groundon_background {
+    background-image: url('pixel_wallpapers/customs/KYOGRE_GROUDON.png');
+
+}
+
+
+
+.mewtwo_background {
+    background-image: url('pixel_wallpapers/customs/MEWTWO.jpg');
+    background-size: 700px 600px;
+
+}
+
+.zekrom_background, .reshiram_background {
+    background-image: url('pixel_wallpapers/customs/ZEKROM_RESHIRAM.png');
+    background-size: 900px 900px;
+
+}
+
+
+
+.palkia_background,
+.dialga_background,
+.uxie_background,
+.mesprit_background,
+.azelf_background
+.giratina_background {
+    background-image: url('pixel_wallpapers/customs/SINNOH_LEGENDARY.png');
+}
+
+
+.turtwig_background,
+.grotle_background,
+.chimchar_background,
+.monferno_background,
+.piplup_background,
+.prinplup_background {
+    background-image: url('pixel_wallpapers/customs/SINNOH_STARTER.jpg');
+    background-size: 1000px, 900px
+}
+
+
+.haxorus_background,
+.hydreigon_background,
+.volcarona_background,
+.excadrill_background,
+.chandelure_background,
+.conkeldurr_background,
+.krookodile_background,
+.bisharp_background,
+.scrafty_background,
+.darmanitan_background {
+    background-image: url('pixel_wallpapers/customs/PSUEDO_LEGENDARY.png');
+}
+
+
+.spiritomb_background,
+.garchomp_background,
+.roserade_background,
+.togekiss_background,
+.lucario_background,
+.milotic_background {
+    background-image: url('pixel_wallpapers/customs/CYNTHIA.avif');
+    background-size: 1100px, 900px
+
+}
+
+
+.infernape_background {
+    background-image: url('pixel_wallpapers/customs/INFERNAPE2.png');
+    background-size: 600px 400px;
+
+}
+
+
+.bouffalant_background {
+    background-image: url('pixel_wallpapers/customs/BOUFFALANT.png');
+    background-size: 600px 400px;
+
+}
+
+.hippowdon_background {
+    background-image: url('pixel_wallpapers/customs/HIPPOWDON2.png');
+    background-size: 600px 400px;
+
+}
+
+
+
+
+
+
+    
+        
+        
 
 
 
