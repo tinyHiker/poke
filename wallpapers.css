@@ -1,0 +1,42 @@
+.bug_background {
+    background-image: url('pixel_wallpapers/BUG.jpg');
+}
+.ice_background {
+    background-image: url('pixel_wallpapers/ICE.jpg');
+
+}
+.fire_background {
+    background-image: url('pixel_wallpapers/FIRE.webp');
+
+}
+.grass_background {
+    background-image: url('pixel_wallpapers/GRASS.jpg');
+
+}
+.dragon_background {
+    background-image: url('pixel_wallpapers/DRAGON1.jpg');
+
+}
+.water_background {
+    background-image: url('pixel_wallpapers/WATER.jpg');
+
+}
+.steel_background {
+    background-image: url('pixel_wallpapers/STEEL.jpg');
+
+}
+.rock_background {
+    background-image: url('pixel_wallpapers/ROCK.jpg');
+
+}
+.psychic_background {
+    background-image: url('pixel_wallpapers/PSYCHIC.jpg');
+
+}
+.normal_background {
+    background-image: url('pixel_wallpapers/NORMAL.jpg')
+}
+
+.ghost_background {
+    background-image: url('pixel_wallpapers/GHOST.gif')
+}

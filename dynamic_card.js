@@ -10,12 +10,22 @@ async function fetchPokemon() {
         const speciesResponse = await fetch(speciesUrl);
         const speciesData = await speciesResponse.json();
 
+        
+
+
+        
+        let pokeGen = speciesData.generation.name
         let statTotal = getStatsTotal(pokeData.stats)
         let pokemonType = pokeData.types[0].type.name.toLowerCase()
+        let pokeName = capitalize(pokeData.name)
+        let primaryType = pokeData.types[0].type.name.toLowerCase()
+
+        let pokeball = getPokeballType(primaryType, statTotal, speciesData.is_baby, speciesData.is_legendary, speciesData.is_mythical)
+
         
-        setWallpaper(pokemonType, statTotal)
+        setWallpaper(pokemonType, statTotal, pokeGen)
         createPokemonCard(pokeData, speciesData);
-        createPokeLinker(pokeData, speciesData);
+        createPokeLinker(pokeName, pokeball);
     } catch (error) {
         alert('Pokémon not found! Please check the name.');
         console.error(error);
@@ -23,15 +33,14 @@ async function fetchPokemon() {
 }
 
 
-function createPokeLinker(data, species) {
+function createPokeLinker( pokemonName, pokeball) {
     const cardContainer = document.getElementById('pokemon-card-container');
-
-    let pokeball = getPokeballType(data, species)
-
     let pokeLinker = document.createElement('a');
-    pokeLinker.href = `https://bulbapedia.bulbagarden.net/wiki/${capitalize(data.name)}`
+
+    pokeLinker.href = `https://bulbapedia.bulbagarden.net/wiki/${pokemonName}`
     pokeLinker.innerHTML = `<img src="pokeballs/${pokeball}" alt="Descriptive Text" class="corner-image">`
     pokeLinker.classList.add('image-link')
+
     cardContainer.appendChild(pokeLinker)
 }
 
@@ -122,6 +131,7 @@ function createPokemonCard(data, species) {
     cardContainer.appendChild(pokemonCard);
 }
 
+
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -144,12 +154,13 @@ function getSprites(data){
 
 }
 
+
+
 function getMaxMinStats(data){
     let stats = data.map(stat => stat.base_stat)
     let max = Math.max(...stats);
     let min = Math.min(...stats);
     return [max, min]
-    
 }
 
 
@@ -166,6 +177,7 @@ function getStatColor(stats, statVal){
 
 }
 
+
 function getStatsTotal(stats){
     let statsTotal = 0
     stats.forEach(stat => statsTotal += stat.base_stat)
@@ -173,23 +185,19 @@ function getStatsTotal(stats){
 
 }
 
-function getPokeballType(data, species){
 
-    let statsTotal = getStatsTotal(data.stats)
+
+function getPokeballType(primaryType, statsTotal, isBaby, isLegendary, isMythical){
     let pokeBall
 
-    primaryType = data.types[0].type.name.toLowerCase()
-
-
-    if (species.is_baby){
+    if (isBaby){
         pokeBall= "DREAMBALL.png"
         return pokeBall
     }
-    if (species.is_legendary || species.is_mythical){
+    if (isLegendary || isMythical){
         pokeBall = "MASTERBALL.png"
         return pokeBall
     }
-
 
 
     if (statsTotal <= 350){
@@ -217,7 +225,17 @@ function getPokeballType(data, species){
 
 }
 
-function setWallpaper(type, base_stat){
-    return undefined
+function setWallpaper(type, baseStat, generation){
+    
+    let body = document.querySelector("body")
+    console.log(body.classList)
+    body.classList.length > 10 ? body.classList.remove('bug_background', 'ice_background', 'grass_background', 'dragon_background', '') : undefined
+    
+
+    body.classList.add(`${type.toLowerCase()}_background`)
+    
+    
+    
+    
 
 }
