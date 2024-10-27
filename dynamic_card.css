@@ -8,6 +8,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 20px;
+    
 }
 
 main {
@@ -18,19 +19,22 @@ main {
 .search-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
+    transform: translateX(-45px);
+    font-weight: bold;
 }
 
-#pokemonName {
+#pokemon-name {
     padding: 7px;
     font-size: 1.1em;
     /* border-radius: 5px; */
-    border: 1px solid #444;
+    border: 4px solid black;
     outline: none;
     background-color: white;
     color: black;
-    width: 250px;
+    width: 375px;
     font-family: 'Courier Prime', monospace;
+    font-weight: bold;
 }
 
 button {
@@ -43,6 +47,13 @@ button {
     /*border-radius: 5px; */
     cursor: pointer;
     font-family: 'Courier Prime', monospace;
+}
+
+#search-button{
+    border:  3px solid black;
+    font-weight: bold;
+    width: 150px
+
 }
 
 button:hover {
@@ -493,8 +504,14 @@ button:hover {
 
 }
 
+
 .pokedex-name:nth-child(even) {
     background-color: red;
-    /*color: white; */
-    border: 4px solid black;
+    
+}
+
+
+
+.pokedex-name:hover {
+    transform: translateX(4px);
 }

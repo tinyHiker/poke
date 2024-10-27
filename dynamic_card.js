@@ -18,29 +18,37 @@ window.onload = async function() {
         pokemon.addEventListener("click", fetchPokemon);
         document.getElementById("pokemon-list").append(pokemon);
     }
+
+    fetchPokemon(undefined, 'charizard')
+
+
     
     
 }
 
 
-window.fetchPokemon = async function(event) {
+window.fetchPokemon = async function(event, poke = null) {
     
     let pokedexNames = await getJSON('./pokemon.json')
     const eventId = event?.target?.id;
-    console.log(eventId)
     
     let pokeUrl;
     let speciesUrl;
     let pokemonName;
 
-    if (pokedexNames.includes(eventId)){
+    if (poke){
+        pokemonName = poke
+        pokeUrl = `https://pokeapi.co/api/v2/pokemon/${poke}`;
+        speciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${poke}`;
+    }
+    else if (pokedexNames.includes(eventId)){
         pokemonName = eventId
         pokeUrl = `https://pokeapi.co/api/v2/pokemon/${eventId}`;
         speciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${eventId}`;
         
 
     } else if (eventId === "search-button") {
-        pokemonName = document.getElementById('pokemonName').value.toLowerCase();
+        pokemonName = document.getElementById('pokemon-name').value.toLowerCase();
         pokeUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
         speciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`;
     }

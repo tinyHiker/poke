@@ -124,7 +124,7 @@
 
 }
 
-.kyogre_background, .groundon_background {
+.kyogre_background, .groudon_background {
     background-image: url('pixel_wallpapers/customs/KYOGRE_GROUDON.png');
 
 }
@@ -165,7 +165,7 @@
     background-size: 1000px, 900px
 }
 
-
+/*
 .haxorus_background,
 .hydreigon_background,
 .volcarona_background,
@@ -178,16 +178,15 @@
 .darmanitan_background {
     background-image: url('pixel_wallpapers/customs/PSUEDO_LEGENDARY.png');
 }
-
+*/
 
 .spiritomb_background,
 .garchomp_background,
-.roserade_background,
 .togekiss_background,
 .lucario_background,
 .milotic_background {
     background-image: url('pixel_wallpapers/customs/CYNTHIA.avif');
-    background-size: 1100px, 900px
+    background-size: 600px, 400px
 
 }
 
@@ -211,6 +210,11 @@
 
 }
 
+
+.bronzong_background{
+    background-image: url('pixel_wallpapers/customs/BRONZONG.png');
+    background-size: 600px 400px;
+}
 
 
 
