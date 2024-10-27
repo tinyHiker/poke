@@ -1,14 +1,15 @@
+//'./background_classes.json'
 
-
-export default async function getBackgroundClasses(){
+export default async function getJSON(path){
     try {
-        let res = await fetch('./background_classes.json')
+        let res = await fetch(path)
         let data = res.json()
         return data
     } catch (e) {
         console.log(e)
     }  
 }
+
 
 export function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);

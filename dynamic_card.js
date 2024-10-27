@@ -1,14 +1,52 @@
 import { capitalize, getStatsTotal, getMaxMinStats} from "./helperFunctions.js"
-import getBackgroundClasses from './helperFunctions.js'
+import getJSON from './helperFunctions.js'
 
-window.fetchPokemon = async function() {
 
-    let background_classes = await getBackgroundClasses()
-    console.log(background_classes)
 
-    const pokemonName = document.getElementById('pokemonName').value.toLowerCase();
-    const pokeUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
-    const speciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`;
+window.onload = async function() {
+
+    let searchButton = document.querySelector('#search-button')
+    searchButton.addEventListener('click', fetchPokemon)
+
+    let pokedexNames = await getJSON('./pokemon.json')
+    for (let name of pokedexNames){
+        let pokedexNames = await getJSON('./pokemon.json')
+        let pokemon = document.createElement("div");
+        pokemon.id = name;
+        pokemon.innerText = capitalize(name);
+        pokemon.classList.add("pokedex-name");
+        pokemon.addEventListener("click", fetchPokemon);
+        document.getElementById("pokemon-list").append(pokemon);
+    }
+    
+    
+}
+
+
+window.fetchPokemon = async function(event) {
+    
+    let pokedexNames = await getJSON('./pokemon.json')
+    const eventId = event?.target?.id;
+    console.log(eventId)
+    
+    let pokeUrl;
+    let speciesUrl;
+    let pokemonName;
+
+    if (pokedexNames.includes(eventId)){
+        pokemonName = eventId
+        pokeUrl = `https://pokeapi.co/api/v2/pokemon/${eventId}`;
+        speciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${eventId}`;
+        
+
+    } else if (eventId === "search-button") {
+        pokemonName = document.getElementById('pokemonName').value.toLowerCase();
+        pokeUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
+        speciesUrl = `https://pokeapi.co/api/v2/pokemon-species/${pokemonName}`;
+    }
+
+
+    let background_classes = await getJSON('./background_classes.json')
 
     try {
         const pokeResponse = await fetch(pokeUrl);
@@ -18,8 +56,6 @@ window.fetchPokemon = async function() {
         const speciesData = await speciesResponse.json();
 
         
-
-
         
         let pokeGen = speciesData.generation.name
         let statTotal = getStatsTotal(pokeData.stats)

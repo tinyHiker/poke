@@ -4,7 +4,6 @@ var pokedex = {}; // {1 : {"name" : "bulbsaur", "img" : url, "type" : ["grass", 
 
 function capitalize(name){
     return name[0].toUpperCase() + name.substring(1).toLowerCase()
-
 }
 
 window.onload = async function() {
@@ -45,7 +44,6 @@ async function getPokemon(num) {
     pokemonDesc = pokemonDesc["flavor_text_entries"][9]["flavor_text"];
 
     pokedex[num] = {"name" : pokemonName, "img" : pokemonImg, "types" : pokemonType, "desc" : pokemonDesc};
-
 }
 
 function updatePokemon(){
