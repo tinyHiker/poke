@@ -96,6 +96,8 @@ function createPokeLinker( pokemonName, pokeball) {
     cardContainer.appendChild(pokeLinker)
 }
 
+
+
 function createPokemonCard(data, species) {
     const cardContainer = document.getElementById('pokemon-card-container');
     cardContainer.innerHTML = ''; // Clear any existing card
