@@ -1,73 +1,73 @@
 .bug_background {
-    background-image: url('pixel_wallpapers/BUG.jpg');
+    background-image: url('../images/pixel_wallpapers/BUG.jpg');
 }
 .dark_background {
-    background-image: url('pixel_wallpapers/Dark.png');
+    background-image: url('../images/pixel_wallpapers/Dark.png');
     background-size: 500px 500px
 }
 .dragon_background {
-    background-image: url('pixel_wallpapers/DRAGON5.png');
+    background-image: url('../images/pixel_wallpapers/DRAGON5.png');
 
 }
 .electric_background {
-    background-image: url('pixel_wallpapers/ELECTRIC.png');
+    background-image: url('../images/pixel_wallpapers/ELECTRIC.png');
     background-size: 700px 700px
 }
 .fighting_background {
-    background-image: url('pixel_wallpapers/FIGHTING3.png');
+    background-image: url('../images/pixel_wallpapers/FIGHTING3.png');
     background-size: 800px 800px
 }
 .fire_background {
-    background-image: url('pixel_wallpapers/FIRE.webp');
+    background-image: url('../images/pixel_wallpapers/FIRE.webp');
     background-size: 700px 700px
 
 }
 .flying_background {
-    background-image: url('pixel_wallpapers/FLYING2.gif')
+    background-image: url('../images/pixel_wallpapers/FLYING2.gif')
 }
 .ghost_background {
-    background-image: url('pixel_wallpapers/GHOST2.jpg');
+    background-image: url('../images/pixel_wallpapers/GHOST2.jpg');
     background-size: 700px 700px
 }
 .grass_background {
-    background-image: url('pixel_wallpapers/GRASS.jpg');
+    background-image: url('../images/pixel_wallpapers/GRASS.jpg');
 
 }
 .ground_background {
-    background-image: url('pixel_wallpapers/GROUND3.png');
+    background-image: url('../images/pixel_wallpapers/GROUND3.png');
     background-size: 800px 800px
 }
 .ice_background {
-    background-image: url('pixel_wallpapers/ICE.jpg');
+    background-image: url('../images/pixel_wallpapers/ICE.jpg');
 
 }
 .normal_background {
-    background-image: url('pixel_wallpapers/NORMAL.jpg');
+    background-image: url('../images/pixel_wallpapers/NORMAL.jpg');
     background-size: 500px 500px
 }
 
 .psychic_background {
-    background-image: url('pixel_wallpapers/PSYCHIC2.jpg');
+    background-image: url('../images/pixel_wallpapers/PSYCHIC2.jpg');
 
 }
 .rock_background {
-    background-image: url('pixel_wallpapers/ROCK.jpg');
+    background-image: url('../images/pixel_wallpapers/ROCK.jpg');
     background-size: 400px 400px
 
 }
 .steel_background {
-    background-image: url('pixel_wallpapers/STEEL2.png');
+    background-image: url('../images/pixel_wallpapers/STEEL2.png');
     background-size: 850px 650px
 
 }
 .water_background {
-    background-image: url('pixel_wallpapers/WATER1.jpg');
+    background-image: url('../images/pixel_wallpapers/WATER1.jpg');
     background-size: 550px 400px
 
 }
 
 .poison_background {
-    background-image: url('pixel_wallpapers/POISON.png');
+    background-image: url('../images/pixel_wallpapers/POISON.png');
     background-size: 800px 700px
 
 }
@@ -100,45 +100,45 @@
 
 
 .arceus_background {
-    background-image: url('pixel_wallpapers/customs/ARCEUS.jpg');
+    background-image: url('../images/pixel_wallpapers/customs/ARCEUS.jpg');
     background-size: 800px 700px;
         
 }
 
 
 .rayquaza_background {
-    background-image: url('pixel_wallpapers/customs/RAYQUAZA.jpg');
+    background-image: url('../images/pixel_wallpapers/customs/RAYQUAZA.jpg');
     background-size: 800px 700px;
         
 }
 
 .lugia_background {
-    background-image: url('pixel_wallpapers/customs/LUGIA.gif');
+    background-image: url('../images/pixel_wallpapers/customs/LUGIA.gif');
     background-size: 700px 650px;
         
 }
 
 .ho-oh_background {
-    background-image: url('pixel_wallpapers/customs/HO-OH.png');
+    background-image: url('../images/pixel_wallpapers/customs/HO-OH.png');
     background-size: 900px 600px
 
 }
 
 .kyogre_background, .groudon_background {
-    background-image: url('pixel_wallpapers/customs/KYOGRE_GROUDON.png');
+    background-image: url('../images/pixel_wallpapers/customs/KYOGRE_GROUDON.png');
 
 }
 
 
 
 .mewtwo_background {
-    background-image: url('pixel_wallpapers/customs/MEWTWO.jpg');
+    background-image: url('../images/pixel_wallpapers/customs/MEWTWO.jpg');
     background-size: 700px 600px;
 
 }
 
 .zekrom_background, .reshiram_background {
-    background-image: url('pixel_wallpapers/customs/ZEKROM_RESHIRAM.png');
+    background-image: url('../images/pixel_wallpapers/customs/ZEKROM_RESHIRAM.png');
     background-size: 900px 900px;
 
 }
@@ -151,7 +151,7 @@
 .mesprit_background,
 .azelf_background
 .giratina_background {
-    background-image: url('pixel_wallpapers/customs/SINNOH_LEGENDARY.png');
+    background-image: url('../images/pixel_wallpapers/customs/SINNOH_LEGENDARY.png');
 }
 
 
@@ -161,7 +161,7 @@
 .monferno_background,
 .piplup_background,
 .prinplup_background {
-    background-image: url('pixel_wallpapers/customs/SINNOH_STARTER.jpg');
+    background-image: url('../images/pixel_wallpapers/customs/SINNOH_STARTER.jpg');
     background-size: 1000px, 900px
 }
 
@@ -176,7 +176,7 @@
 .bisharp_background,
 .scrafty_background,
 .darmanitan_background {
-    background-image: url('pixel_wallpapers/customs/PSUEDO_LEGENDARY.png');
+    background-image: url('../images/pixel_wallpapers/customs/PSUEDO_LEGENDARY.png');
 }
 */
 
@@ -185,34 +185,34 @@
 .togekiss_background,
 .lucario_background,
 .milotic_background {
-    background-image: url('pixel_wallpapers/customs/CYNTHIA.avif');
+    background-image: url('../images/pixel_wallpapers/customs/CYNTHIA.avif');
     background-size: 600px, 400px
 
 }
 
 
 .infernape_background {
-    background-image: url('pixel_wallpapers/customs/INFERNAPE2.png');
+    background-image: url('../images/pixel_wallpapers/customs/INFERNAPE2.png');
     background-size: 600px 400px;
 
 }
 
 
 .bouffalant_background {
-    background-image: url('pixel_wallpapers/customs/BOUFFALANT.png');
+    background-image: url('../images/pixel_wallpapers/customs/BOUFFALANT.png');
     background-size: 600px 400px;
 
 }
 
 .hippowdon_background {
-    background-image: url('pixel_wallpapers/customs/HIPPOWDON2.png');
+    background-image: url('../images/pixel_wallpapers/customs/HIPPOWDON2.png');
     background-size: 600px 400px;
 
 }
 
 
 .bronzong_background{
-    background-image: url('pixel_wallpapers/customs/BRONZONG.png');
+    background-image: url('../images/pixel_wallpapers/customs/BRONZONG.png');
     background-size: 600px 400px;
 }
 

@@ -90,7 +90,7 @@ function createPokeLinker( pokemonName, pokeball) {
     let pokeLinker = document.createElement('a');
 
     pokeLinker.href = `https://bulbapedia.bulbagarden.net/wiki/${pokemonName}`
-    pokeLinker.innerHTML = `<img src="pokeballs/${pokeball}" alt="Descriptive Text" class="corner-image">`
+    pokeLinker.innerHTML = `<img src="images/pokeballs/${pokeball}" alt="Descriptive Text" class="corner-image">`
     pokeLinker.classList.add('image-link')
 
     cardContainer.appendChild(pokeLinker)

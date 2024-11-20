@@ -111,92 +111,92 @@ button:hover {
 
 
 #fire-image-container {
-    background-image: url('stages/fire_stage.png');
+    background-image: url('../images/stages/fire_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #bug-image-container {
-    background-image: url('stages/bug_stage.png');
+    background-image: url('../images/stages/bug_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #dark-image-container {
-    background-image: url('stages/dark_stage.png');
+    background-image: url('../images/stages/dark_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #dragon-image-container {
-    background-image: url('stages/dragon_stage.png');
+    background-image: url('../images/stages/dragon_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #fairy-image-container {
-    background-image: url('stages/fairy_stage.png');
+    background-image: url('../images/stages/fairy_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #fighting-image-container {
-    background-image: url('stages/fighting_stage.png');
+    background-image: url('../images/stages/fighting_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #fire-image-container {
-    background-image: url('stages/fire_stage.png');
+    background-image: url('../images/stages/fire_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #flying-image-container {
-    background-image: url('stages/flying_stage.png');
+    background-image: url('../images/stages/flying_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 }
 #grass-image-container {
-    background-image: url('stages/grass_stage.png');
+    background-image: url('../images/stages/grass_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 }
 #ground-image-container {
-    background-image: url('stages/ground_stage.png');
+    background-image: url('../images/stages/ground_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #ice-image-container {
-    background-image: url('stages/ice_stage.png');
+    background-image: url('../images/stages/ice_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #poison-image-container {
-    background-image: url('stages/poison_stage.png');
+    background-image: url('../images/stages/poison_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 
 }
 #psychic-image-container {
-    background-image: url('stages/psychic_stage.png');
+    background-image: url('../images/stages/psychic_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 }
 #steel-image-container {
-    background-image: url('stages/steel_stage.png');
+    background-image: url('../images/stages/steel_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 }
 #water-image-container {
-    background-image: url('stages/water_stage.png');
+    background-image: url('../images/stages/water_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 }
 #rock-image-container {
-    background-image: url('stages/rock_stage.png');
+    background-image: url('../images/stages/rock_stage.png');
     background-repeat: no-repeat;
     background-size: cover
 }
